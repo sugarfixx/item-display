@@ -15,9 +15,9 @@ class VideoDisplay implements ItemsInterface
 
     public function makeDisplay() : Item
     {
-        $book = new Item();
-        $book->setTitle($this->title);
-        $book->setImage('Video Poster');
-        return $book;
+        $video = new Item();
+        $video->setTitle($this->title);
+        $video->setImage('Video Poster');
+        return $video;
     }
 }
