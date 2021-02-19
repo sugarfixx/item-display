@@ -10,15 +10,20 @@ class ItemDisplayFactory
     {
         switch (strtolower($type)) {
             case "book" :
-                $creator = 'a';
+                $creator = new BookDisplayCreator($title);
                 break;
             case "video" :
-                $creator = 'b';
+                $creator = new VideoDisplayCreator($title);
                 break;
             case "audio" :
-                $creator = 'c';
+                $creator = new AudioDisplayCreator($title);
+                break;
+            default :
+                $creator = null;
         }
-        return $this->client($creator);
+        if ($creator) {
+            return $this->client($creator);
+        }
     }
 
     public function client(ItemCreator $creator)
