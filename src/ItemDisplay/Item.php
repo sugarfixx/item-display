@@ -10,6 +10,8 @@ class Item implements \JsonSerializable
 
     private $title;
 
+    private $creator;
+
     /**
      * @return mixed
      */
@@ -46,11 +48,31 @@ class Item implements \JsonSerializable
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCreator()
+    {
+        return $this->creator;
+    }
+
+    /**
+     * @param mixed $creator
+     * @return Item
+     */
+    public function setCreator($creator)
+    {
+        $this->creator = $creator;
+        return $this;
+    }
+
+
     public function jsonSerialize()
     {
         return [
             'title' => $this->title,
-            'image' => $this->image
+            'image' => $this->image,
+            '_creator' => $this->creator
         ];
     }
 

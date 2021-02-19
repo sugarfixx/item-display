@@ -18,6 +18,7 @@ class AudioDisplay implements ItemsInterface
         $audio = new Item();
         $audio->setTitle($this->title);
         $audio->setImage('Album Cover');
+        $audio->setCreator('AudioDisplayClass');
         return $audio;
     }
 }

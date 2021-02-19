@@ -18,6 +18,7 @@ class VideoDisplay implements ItemsInterface
         $video = new Item();
         $video->setTitle($this->title);
         $video->setImage('Video Poster');
+        $video->setCreator('VideoDisplay::class');
         return $video;
     }
 }

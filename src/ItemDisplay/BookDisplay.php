@@ -18,6 +18,7 @@ class BookDisplay implements ItemsInterface
         $book = new Item();
         $book->setTitle($this->title);
         $book->setImage('Book Cover');
+        $book->setCreator('BookDisplay::class');
         return $book;
     }
 }

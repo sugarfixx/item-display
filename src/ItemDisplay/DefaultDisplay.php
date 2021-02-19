@@ -18,6 +18,7 @@ class DefaultDisplay implements ItemsInterface
         $display = new Item();
         $display->setTitle($this->title);
         $display->setImage('Default Image');
+        $display->setCreator('DefaultDisplay::class');
         return $display;
     }
 }
