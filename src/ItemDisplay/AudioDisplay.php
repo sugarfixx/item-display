@@ -15,9 +15,9 @@ class AudioDisplay implements ItemsInterface
 
     public function makeDisplay() : Item
     {
-        $book = new Item();
-        $book->setTitle($this->title);
-        $book->setImage('Album Cover');
-        return $book;
+        $audio = new Item();
+        $audio->setTitle($this->title);
+        $audio->setImage('Album Cover');
+        return $audio;
     }
 }
