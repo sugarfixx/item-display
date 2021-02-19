@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -14,8 +13,11 @@ class BookDisplay implements ItemsInterface
         $this->title = $title;
     }
 
-    public function makeDisplay()
+    public function makeDisplay() : Item
     {
-        // TODO: Implement makeDisplay() method.
+        $book = new Item();
+        $book->setTitle($this->title);
+        $book->setImage('Book Cover');
+        return $book;
     }
 }
