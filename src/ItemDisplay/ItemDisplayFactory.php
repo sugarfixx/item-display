@@ -19,11 +19,10 @@ class ItemDisplayFactory
                 $creator = new AudioDisplayCreator($title);
                 break;
             default :
-                $creator = null;
+                $creator = new DefaultDisplayCreator($title);
         }
-        if ($creator) {
-            return $this->client($creator);
-        }
+
+        return $this->client($creator);
     }
 
     public function client(ItemCreator $creator)
