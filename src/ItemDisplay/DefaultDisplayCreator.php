@@ -15,6 +15,6 @@ class DefaultDisplayCreator extends ItemCreator
 
     public function createItem(): ItemsInterface
     {
-        return new BookDisplay($this->title);
+        return new DefaultDisplay($this->title);
     }
 }
