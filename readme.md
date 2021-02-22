@@ -21,3 +21,12 @@ If you are starting a blank project from a clean composer.json
    ]
 }
 ```
+
+
+## Assignment
+
+Using the factory method pattern, create an Item Display factory processing books, video and audio items and outputting them as uniform Items. A fallback to Default item should be included.
+
+The factory has defined both Item Creator and Items Interface.  
+All creators are extending the Item creator, all Item Displays implement Items Interface and return an instance of Item.
+  
